@@ -1,9 +1,11 @@
 # requirements.txt
-pandas
-requests
-aiohttp
+flask
 python-dotenv
+requests
+pandas
 sentence-transformers
 scikit-learn
-numpy
+chromadb
 sqlalchemy
+openpyxl
+tqdm
