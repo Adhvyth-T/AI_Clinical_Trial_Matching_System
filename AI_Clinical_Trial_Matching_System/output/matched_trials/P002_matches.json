@@ -3,13 +3,13 @@
     "nct_id": "NCT1000002",
     "title": "Hypertension Drug Efficacy Study",
     "eligible": false,
-    "reason": "Error during LLM validation: Expecting value: line 1 column 1 (char 0)"
+    "reason": "patient does not meet gender criteria"
   },
   {
     "nct_id": "NCT1000001",
     "title": "Metformin Use in Type 2 Diabetes",
     "eligible": false,
-    "reason": "Error during LLM validation: Expecting value: line 1 column 1 (char 0)"
+    "reason": "age is not provided"
   },
   {
     "nct_id": "NCT1000003",
