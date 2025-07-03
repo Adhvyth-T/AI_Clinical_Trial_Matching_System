@@ -41,7 +41,7 @@ Vector Embedding (SentenceTransformer)
 * Flask (frontend)
 * SQLite + Pandas
 * SentenceTransformer (MiniLM)
-* OpenRouter LLM API (Mistral 7B)
+* OpenRouter LLM API (deepseek/deepseek-r1-0528-qwen3-8b)
 * dotenv, requests, json
 
 ---
