@@ -1,3 +1,7 @@
+Here’s your updated `README.md` with the requested additions:
+
+---
+
 # 🧠 AI-Based Clinical Trial Matching System
 
 ## 🔍 Project Overview
@@ -51,14 +55,16 @@ Vector Embedding (SentenceTransformer)
 ```bash
 AI_Clinical_Trial_Matching_System/
 ├── app.py                 # Flask app
+├── main.py               # CLI-based pipeline entry point
 ├── templates/             # HTML frontend
 │   ├── index.html
 │   └── results.html
 ├── src/
-│   ├── data/              # Ingestion logic
+│   ├── data/              # Ingestion logic (CSV, web scraping)
 │   ├── llm/               # OpenRouter summarizer
-│   ├── match/             # Matching engine
-│   └── pipeline/          # Orchestration
+│   ├── embedding/         # Embedding logic
+│   ├── matching/          # Trial matcher
+│   └── pipeline/          # Pipeline orchestration
 ├── data/
 │   ├── patient_data/      # conditions.csv etc.
 │   └── clinical_trials/   # trials.csv
@@ -86,13 +92,13 @@ pip install -r requirements.txt
 
 Create a `.env` file in the root:
 
-```
+```env
 OPENROUTER_API_KEY=your_openrouter_api_key_here
 ```
 
 ---
 
-## 🚀 How to Use (Flask UI)
+## 🚀 How to Use (Option 1: Flask UI)
 
 ### 1. Start the Flask App
 
@@ -126,6 +132,47 @@ You can use [this sample patient data](https://mitre.box.com/shared/static/aw9po
 
 ---
 
+## 🧪 Option 2: Run Matching Without UI
+
+You can also run the system directly using preloaded data:
+
+### 1. Prepare Data
+
+Place your files like so:
+
+```bash
+data/patient_data/conditions.csv
+data/clinical_trials/trials.csv
+```
+
+> You can also let the system **scrape trials from ClinicalTrials.gov**.(API not available in some regions)
+
+The scraping logic uses default trial URLs from:
+
+```python
+src/data/web_scraper_trials.py
+```
+
+🔧 **To change the scraping source**, modify the base URL or logic in that file.
+
+---
+
+### 2. Run via Command Line
+
+```bash
+python main.py
+```
+
+This will:
+
+* Convert patient data to SQLite
+* Scrape & load trial data
+* Summarize all inputs
+* Match and score trials
+* Save results to `output/matched_trials/`
+
+---
+
 ## 📦 Sample Output Format
 
 ```json
@@ -135,8 +182,7 @@ You can use [this sample patient data](https://mitre.box.com/shared/static/aw9po
     "title": "Hypertension Drug Study",
     "eligible": false,
     "reason": "The patient does not meet age requirement."
-  },
-  ...
+  }
 ]
 ```
 
@@ -144,21 +190,21 @@ You can use [this sample patient data](https://mitre.box.com/shared/static/aw9po
 
 ## 🛠 Troubleshooting
 
-### 1. ❌ `401 Unauthorized`
+### ❌ 401 Unauthorized
 
-Check your `.env` file:
+Check your `.env` file contains a valid API key:
 
 ```bash
 OPENROUTER_API_KEY=your_key
 ```
 
-### 2. `Expecting value: line 1 column 1`
+### ⚠️ Expecting value: line 1 column 1
 
-LLM returned empty response — could be due to:
+This means LLM returned empty or invalid JSON. Common causes:
 
-* Invalid prompt
-* Rate limit
-* Missing `age` or malformed criteria
+* Invalid or missing prompts
+* API quota exceeded
+* Missing patient age or clinical criteria
 
 ---
 
@@ -176,3 +222,6 @@ LLM returned empty response — could be due to:
 
 MIT
 
+---
+
+Let me know if you’d like a version of this in `README.md` format with embedded sample data or API keys redacted.
