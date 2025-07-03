@@ -1,0 +1,28 @@
+<!-- templates/results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results for {{ filename }}</title>
+</head>
+<body>
+  <h1>Match Results - {{ filename }}</h1>
+  <a href="/">⬅ Back to Home</a>
+  <hr>
+  {% for match in results %}
+    <div style="margin-bottom: 1.5em;">
+      <h3>{{ match.title }}</h3>
+      <p><strong>NCT ID:</strong> {{ match.nct_id }}</p>
+      {% if match.eligible == true %}
+        <p style="color:green;">✅ Eligible</p>
+      {% elif match.eligible == false %}
+        <p style="color:red;">❌ Not Eligible</p>
+      {% else %}
+        <p style="color:orange;">⚠️ Unknown</p>
+      {% endif %}
+      <p><strong>Reason:</strong> {{ match.reason }}</p>
+    </div>
+    <hr>
+  {% endfor %}
+</body>
+</html>

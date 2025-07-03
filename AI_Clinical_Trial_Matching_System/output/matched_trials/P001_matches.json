@@ -1,0 +1,20 @@
+[
+  {
+    "nct_id": "NCT1000001",
+    "title": "Metformin Use in Type 2 Diabetes",
+    "eligible": false,
+    "reason": "Error during LLM validation: Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "nct_id": "NCT1000002",
+    "title": "Hypertension Drug Efficacy Study",
+    "eligible": true,
+    "reason": "The trial's eligibility criteria are not fully specified in the provided data ([no summary available]). The patient has Type 2 Diabetes, Obesity, and is on Metformin, but without specific exclusion criteria for these conditions in the trial, they are not automatically disqualified. Standard hypertension trials may not exclude Type 2 Diabetes or Metformin use, as these are common comorbidities and are not typically contraindications unless explicitly stated. Therefore, without additional exclusion details, the patient is considered eligible based on the available information."
+  },
+  {
+    "nct_id": "NCT1000003",
+    "title": "Weight Loss Trial for Obese Adults",
+    "eligible": false,
+    "reason": "Error during LLM validation: Expecting value: line 1 column 1 (char 0)"
+  }
+]

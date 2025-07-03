@@ -1,0 +1,20 @@
+[
+  {
+    "nct_id": "NCT1000002",
+    "title": "Hypertension Drug Efficacy Study",
+    "eligible": false,
+    "reason": "Error during LLM validation: Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "nct_id": "NCT1000001",
+    "title": "Metformin Use in Type 2 Diabetes",
+    "eligible": false,
+    "reason": "Error during LLM validation: Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "nct_id": "NCT1000003",
+    "title": "Weight Loss Trial for Obese Adults",
+    "eligible": false,
+    "reason": "The patient's weight status is not provided, and the trial is specifically for obese adults. Without confirmation of obesity (BMI \u2265 30 kg/m\u00b2), the patient cannot be eligible. Additionally, the trial's inclusion and exclusion summary is not available, but the trial title indicates it is for obese adults, and obesity is a key requirement for participation in most weight loss trials."
+  }
+]

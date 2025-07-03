@@ -1,0 +1,9 @@
+# requirements.txt
+pandas
+requests
+aiohttp
+python-dotenv
+sentence-transformers
+scikit-learn
+numpy
+sqlalchemy

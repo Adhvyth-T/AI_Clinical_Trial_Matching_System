@@ -1,0 +1,23 @@
+[
+  {
+    "nct_id": "NCT1000001",
+    "title": "Metformin Use in Type 2 Diabetes",
+    "inclusion": "Diagnosed with Type 2 Diabetes, age between 30 and 70, on stable metformin dose",
+    "exclusion": "Renal impairment, pregnant or breastfeeding, prior insulin therapy",
+    "summary": "Here is a summary of the clinical trial eligibility criteria:\n\n**Inclusion Criteria:**\n*   Diagnosed with Type 2 Diabetes.\n*   Age between 30 and 70 years. (Meaning eligible participants must be 30, 31, 32, ..., up to the age of 70).\n*   Currently on a stable dose of metformin.\n\n**Exclusion Criteria:**\n*   Renal impairment.\n*   Pregnancy or breastfeeding.\n*   Prior insulin therapy for diabetes."
+  },
+  {
+    "nct_id": "NCT1000002",
+    "title": "Hypertension Drug Efficacy Study",
+    "inclusion": "Age 40\u201380, systolic BP > 140, diagnosed hypertension",
+    "exclusion": "Previous stroke, chronic kidney disease stage 3 or higher",
+    "summary": "Here's a summary of the eligibility criteria:\n\n**Eligibility Criteria**\n\n**Inclusion:**\n*   Age 40\u201380 years\n*   Systolic Blood Pressure > 140 mmHg\n*   Diagnosed with Hypertension (High Blood Pressure)\n\n**Exclusion:**\n*   History of Stroke\n*   Chronic Kidney Disease at Stage 3 or Higher"
+  },
+  {
+    "nct_id": "NCT1000003",
+    "title": "Weight Loss Trial for Obese Adults",
+    "inclusion": "BMI \u2265 30, age 18\u201360",
+    "exclusion": "Active thyroid disease, bariatric surgery history",
+    "summary": "Here is a summary of the clinical trial eligibility criteria:\n\n**Eligibility Criteria:**\n\n*   **Inclusion:**\n    *   BMI \u2265 30\n    *   Age between 18 and 60 (inclusive)\n*   **Exclusion:**\n    *   History of bariatric surgery\n    *   Active thyroid disease"
+  }
+]

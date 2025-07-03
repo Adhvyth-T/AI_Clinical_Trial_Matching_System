@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clinical Trial Matcher</title>
+</head>
+<body>
+  <h1>🧠 Clinical Trial Matcher</h1>
+
+  {% if message %}
+    <p><strong>{{ message }}</strong></p>
+  {% endif %}
+
+  <form action="/" method="post" enctype="multipart/form-data">
+    <label>Upload Patient Conditions CSV:</label><br>
+    <input type="file" name="patient_csv" accept=".csv"><br><br>
+
+    <label>Upload Trials CSV:</label><br>
+    <input type="file" name="trial_csv" accept=".csv"><br><br>
+
+    <button type="submit">Run Matching</button>
+  </form>
+
+  <hr>
+  <h2>📄 View Match Results(will Update if new trial and matching results are added)</h2>
+  {% if match_files %}
+    <ul>
+      {% for file in match_files %}
+        <li><a href="/results/{{ file }}">{{ file }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No matched files found yet.</p>
+  {% endif %}
+</body>
+</html>
