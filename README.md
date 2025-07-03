@@ -1,7 +1,3 @@
-Here’s your updated `README.md` with the requested additions:
-
----
-
 # 🧠 AI-Based Clinical Trial Matching System
 
 ## 🔍 Project Overview
