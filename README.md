@@ -220,4 +220,3 @@ MIT
 
 ---
 
-Let me know if you’d like a version of this in `README.md` format with embedded sample data or API keys redacted.
